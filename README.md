@@ -32,6 +32,7 @@ Ante la ausencia de microdatos clínicos públicos en Bolivia, los datos (`ficha
 
 ## 3. Estructura y Ejecución
 
+``````text
 vigilancia_mercurio_bolivia/
 ├── app/app.py                          # Interfaz clínica (Streamlit)
 ├── data/                               # Dataset maestro, matrices X/Y y validación JSON
@@ -40,7 +41,8 @@ vigilancia_mercurio_bolivia/
     ├── generate_synthetic_bolivia.py   # Generador causal v2.0
     ├── features_pipeline.py            # Motor Guía 537 + limpieza
     └── train_models.py                 # Entrenamiento y evaluación
-Ejecución en PowerShell (Windows):
+
+``````
 
 ## Ejecución Rápida
 ```bash
@@ -85,7 +87,6 @@ Gower, J. C. (1971). A general coefficient of similarity. Biometrics, 27(4), 857
 Campello, R. J., Moulavi, D., & Sander, J. (2013). Density-based clustering (HDBSCAN). PAKDD, 160–172. https://doi.org/10.1007/978-3-642-37456-2_14
 
 Liu, F. T., Ting, K. M., & Zhou, Z. H. (2008). Isolation Forest. IEEE ICDM, 413–422. https://doi.org/10.1109/ICDM.2008.17
+
 "@ | Out-File -Encoding utf8 README.md
 
-python src/train_models.py
-streamlit run app/app.py
