@@ -1,7 +1,10 @@
 ﻿
 #  Construcción del Dataset Sintético (`N = 1,500`, `seed = 42`)
 
+---
+
 Ante la ausencia de microdatos clínicos públicos en Bolivia, los datos (`ficha_mercurio_bolivia_v2.csv`, 87 columnas) se generaron mediante **simulación estocástica causal por variables latentes** para garantizar coherencia biológica y evitar filas aleatorias sin sentido clínico:
+
 
 * **Flujo Causal:** `Escenario latente (Z)` $\rightarrow$ `Exposición y temporalidad` $\rightarrow$ `Biomarcadores lognormales (B)` $\rightarrow$ `Manifestaciones clínicas (S)` $\rightarrow$ `Perturbaciones y faltantes`.
 * **5 Escenarios Epidemiológicos Latentes:** Exposición alimentaria predominante a $\text{MeHg}$ (30 %), exposición ocupacional a $\text{Hg}^0$ (25 %), exposición mixta (20 %), exposición inorgánica a $\text{Hg}^{2+}$ (10 %) y controles de baja exposición (15 %). Incluye transversales de vulnerabilidad (embarazo, lactancia, menores de 18 años).
@@ -13,7 +16,7 @@ Ante la ausencia de microdatos clínicos públicos en Bolivia, los datos (`ficha
 
 ---
 
-## 2. Arquitectura del Sistema
+## Arquitectura del Sistema
 
 | Capa | Algoritmo / Lógica | Entrada | Función |
 | :--- | :--- | :--- | :--- |
@@ -24,7 +27,7 @@ Ante la ausencia de microdatos clínicos públicos en Bolivia, los datos (`ficha
 
 ---
 
-## 3. Estructura y Ejecución
+## Estructura y Ejecución
 
 ``````text
 vigilancia_mercurio_bolivia/
@@ -45,7 +48,8 @@ python src/generate_synthetic_bolivia.py --out ./data
 
 ```
 
-4. Referencias Científicas y Normativas
+## Referencias Científicas y Normativas
+
 Ministerio de Salud y Deportes de Bolivia (2024). Guía Técnica N.º 537: Vigilancia Epidemiológica y Atención Integral de la Intoxicación por Mercurio.
 
 Clarkson, T. W., & Magos, L. (2006). The toxicology of mercury and its chemical compounds. Critical Reviews in Toxicology, 36(8), 609–662. https://doi.org/10.1080/10408440600845619
