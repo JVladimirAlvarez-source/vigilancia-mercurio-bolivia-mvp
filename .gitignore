@@ -1,0 +1,11 @@
+﻿# Entornos y caché
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.ipynb_checkpoints/
+
+# Datos temporales o pesados
+*.parquet
+.DS_Store

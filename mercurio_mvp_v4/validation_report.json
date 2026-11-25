@@ -1,0 +1,565 @@
+{
+  "summary": {
+    "structural_assertions": "PASS",
+    "max_abs_symptom_biomarker_spearman": 0.2502335313562073,
+    "max_abs_noise_upstream_pearson": 0.07310299526450095,
+    "noise_threshold_0_05_pass": false,
+    "empirical_validation": "NOT ESTABLISHED",
+    "targets_null": 0,
+    "anomalies": 97,
+    "measured": 1214
+  },
+  "continuous": {
+    "Control EE.UU.:0": {
+      "reference_model_median": 0.2,
+      "generated_median": 0.19718114971964576,
+      "median_difference": -0.0028188502803542514,
+      "KS_D_model": 0.05077003658370843,
+      "KS_p_model_descriptive": 0.5516412853909274,
+      "empirical_KS": null
+    },
+    "Control EE.UU.:1": {
+      "reference_model_median": 0.1835127987193455,
+      "generated_median": 0.17382867373434174,
+      "median_difference": -0.009684124985003761,
+      "KS_D_model": 0.04156730584481516,
+      "KS_p_model_descriptive": 0.7873392005975371,
+      "empirical_KS": null
+    },
+    "Control EE.UU.:2": {
+      "reference_model_median": 0.58,
+      "generated_median": 0.5584181949788762,
+      "median_difference": -0.021581805021123723,
+      "KS_D_model": 0.07560916611624341,
+      "KS_p_model_descriptive": 0.12355240001671897,
+      "empirical_KS": null
+    },
+    "Ribereño Beni:0": {
+      "reference_model_median": 4.0,
+      "generated_median": 4.114527893392,
+      "median_difference": 0.1145278933920002,
+      "KS_D_model": 0.025476755171532417,
+      "KS_p_model_descriptive": 0.9322424051615681,
+      "empirical_KS": null
+    },
+    "Ribereño Beni:1": {
+      "reference_model_median": 0.55,
+      "generated_median": 0.5124160834310146,
+      "median_difference": -0.03758391656898541,
+      "KS_D_model": 0.05027155323363475,
+      "KS_p_model_descriptive": 0.21214548583111514,
+      "empirical_KS": null
+    },
+    "Ribereño Beni:2": {
+      "reference_model_median": 7.4,
+      "generated_median": 7.797581479561175,
+      "median_difference": 0.3975814795611745,
+      "KS_D_model": 0.04725558975866914,
+      "KS_p_model_descriptive": 0.27454208643524136,
+      "empirical_KS": null
+    },
+    "Mixto:0": {
+      "reference_model_median": 1.6,
+      "generated_median": 1.7085542423558666,
+      "median_difference": 0.10855424235586653,
+      "KS_D_model": 0.04635637067047976,
+      "KS_p_model_descriptive": 0.6757685173834549,
+      "empirical_KS": null
+    },
+    "Mixto:1": {
+      "reference_model_median": 3.9,
+      "generated_median": 4.0723790849600485,
+      "median_difference": 0.1723790849600486,
+      "KS_D_model": 0.09511941098723867,
+      "KS_p_model_descriptive": 0.02658575304808386,
+      "empirical_KS": null
+    },
+    "Mixto:2": {
+      "reference_model_median": 7.0,
+      "generated_median": 8.31536110431505,
+      "median_difference": 1.3153611043150502,
+      "KS_D_model": 0.09157269212679903,
+      "KS_p_model_descriptive": 0.03641124607451396,
+      "empirical_KS": null
+    },
+    "Quemador Antioquia:0": {
+      "reference_model_median": 0.8,
+      "generated_median": 0.771562707477474,
+      "median_difference": -0.028437292522526025,
+      "KS_D_model": 0.03157757077514731,
+      "KS_p_model_descriptive": 0.8540068731279201,
+      "empirical_KS": null
+    },
+    "Quemador Antioquia:1": {
+      "reference_model_median": 3.9,
+      "generated_median": 4.455399193006224,
+      "median_difference": 0.5553991930062243,
+      "KS_D_model": 0.08476809424687093,
+      "KS_p_model_descriptive": 0.01064978955197879,
+      "empirical_KS": null
+    },
+    "Quemador Antioquia:2": {
+      "reference_model_median": 7.0,
+      "generated_median": 7.746331272688574,
+      "median_difference": 0.7463312726885736,
+      "KS_D_model": 0.05861323572704025,
+      "KS_p_model_descriptive": 0.16195941916595014,
+      "empirical_KS": null
+    },
+    "Minero Madre de Dios:0": {
+      "reference_model_median": 1.6,
+      "generated_median": 1.8081334522911665,
+      "median_difference": 0.20813345229116642,
+      "KS_D_model": 0.08164421350037132,
+      "KS_p_model_descriptive": 0.08928306843075184,
+      "empirical_KS": null
+    },
+    "Minero Madre de Dios:1": {
+      "reference_model_median": 5.5,
+      "generated_median": 7.77431052801543,
+      "median_difference": 2.2743105280154303,
+      "KS_D_model": 0.14087398080609226,
+      "KS_p_model_descriptive": 0.00019901435356016586,
+      "empirical_KS": null
+    },
+    "Minero Madre de Dios:2": {
+      "reference_model_median": 5.0,
+      "generated_median": 5.240584181846846,
+      "median_difference": 0.24058418184684616,
+      "KS_D_model": 0.04474779177334043,
+      "KS_p_model_descriptive": 0.7314401450166832,
+      "empirical_KS": null
+    }
+  },
+  "binary_controls": {
+    "clin_35_nauseas": {
+      "prevalence": 0.03765690376569038,
+      "wilson95": [
+        0.01993572982158075,
+        0.0700054973756299
+      ],
+      "baseline_assumed": 0.05,
+      "published_comparable": null
+    },
+    "clin_36_vomito": {
+      "prevalence": 0.02510460251046025,
+      "wilson95": [
+        0.011555319704640684,
+        0.053678429497924104
+      ],
+      "baseline_assumed": 0.025,
+      "published_comparable": null
+    },
+    "clin_37_disfagia": {
+      "prevalence": 0.008368200836820083,
+      "wilson95": [
+        0.002297870260448637,
+        0.029992574949255002
+      ],
+      "baseline_assumed": 0.015,
+      "published_comparable": null
+    },
+    "clin_38_gingivitis": {
+      "prevalence": 0.029288702928870293,
+      "wilson95": [
+        0.014258437664931442,
+        0.05921113753584864
+      ],
+      "baseline_assumed": 0.04,
+      "published_comparable": null
+    },
+    "clin_39_salivacion_excesiva": {
+      "prevalence": 0.02510460251046025,
+      "wilson95": [
+        0.011555319704640684,
+        0.053678429497924104
+      ],
+      "baseline_assumed": 0.02,
+      "published_comparable": null
+    },
+    "clin_40_estomatitis_mercurial": {
+      "prevalence": 0.0041841004184100415,
+      "wilson95": [
+        0.0007389786905962828,
+        0.023315640520892064
+      ],
+      "baseline_assumed": 0.006,
+      "published_comparable": null
+    },
+    "clin_41_sabor_metalico": {
+      "prevalence": 0.02510460251046025,
+      "wilson95": [
+        0.011555319704640684,
+        0.053678429497924104
+      ],
+      "baseline_assumed": 0.025,
+      "published_comparable": null
+    },
+    "clin_42_ribete_gilbert": {
+      "prevalence": 0.0,
+      "wilson95": [
+        0.0,
+        0.015818793213273057
+      ],
+      "baseline_assumed": 0.004,
+      "published_comparable": null
+    },
+    "clin_43_diente_letulle": {
+      "prevalence": 0.0,
+      "wilson95": [
+        0.0,
+        0.015818793213273057
+      ],
+      "baseline_assumed": 0.004,
+      "published_comparable": null
+    },
+    "clin_44_hepatomegalia": {
+      "prevalence": 0.008368200836820083,
+      "wilson95": [
+        0.002297870260448637,
+        0.029992574949255002
+      ],
+      "baseline_assumed": 0.01,
+      "published_comparable": null
+    },
+    "clin_45_hematuria": {
+      "prevalence": 0.016736401673640166,
+      "wilson95": [
+        0.006527215766825991,
+        0.04223488143930822
+      ],
+      "baseline_assumed": 0.012,
+      "published_comparable": null
+    },
+    "clin_46_prurito": {
+      "prevalence": 0.06276150627615062,
+      "wilson95": [
+        0.03839966276433698,
+        0.10095652042216541
+      ],
+      "baseline_assumed": 0.06,
+      "published_comparable": null
+    },
+    "clin_47_descamacion_piel": {
+      "prevalence": 0.029288702928870293,
+      "wilson95": [
+        0.014258437664931442,
+        0.05921113753584864
+      ],
+      "baseline_assumed": 0.025,
+      "published_comparable": null
+    },
+    "clin_48_erupcion_cutanea": {
+      "prevalence": 0.03765690376569038,
+      "wilson95": [
+        0.01993572982158075,
+        0.0700054973756299
+      ],
+      "baseline_assumed": 0.04,
+      "published_comparable": null
+    },
+    "clin_49_irritacion_ocular": {
+      "prevalence": 0.04602510460251046,
+      "wilson95": [
+        0.025891167810464823,
+        0.0805217113831764
+      ],
+      "baseline_assumed": 0.05,
+      "published_comparable": null
+    },
+    "clin_50_conjuntivitis": {
+      "prevalence": 0.05439330543933055,
+      "wilson95": [
+        0.03205991872618863,
+        0.09082461246388318
+      ],
+      "baseline_assumed": 0.03,
+      "published_comparable": null
+    },
+    "clin_51_disminucion_campo_visual": {
+      "prevalence": 0.012552301255230125,
+      "wilson95": [
+        0.004277929600233155,
+        0.036248341607685766
+      ],
+      "baseline_assumed": 0.018,
+      "published_comparable": null
+    },
+    "clin_52_opresion_ardor_torax": {
+      "prevalence": 0.016736401673640166,
+      "wilson95": [
+        0.006527215766825991,
+        0.04223488143930822
+      ],
+      "baseline_assumed": 0.025,
+      "published_comparable": null
+    },
+    "clin_53_convulsiones": {
+      "prevalence": 0.0,
+      "wilson95": [
+        0.0,
+        0.015818793213273057
+      ],
+      "baseline_assumed": 0.003,
+      "published_comparable": null
+    },
+    "clin_54_disfuncion_renal": {
+      "prevalence": 0.008368200836820083,
+      "wilson95": [
+        0.002297870260448637,
+        0.029992574949255002
+      ],
+      "baseline_assumed": 0.012,
+      "published_comparable": null
+    },
+    "clin_55_depresion": {
+      "prevalence": 0.07531380753138076,
+      "wilson95": [
+        0.048167712364686414,
+        0.11589594881646184
+      ],
+      "baseline_assumed": 0.08,
+      "published_comparable": null
+    },
+    "clin_56_ansiedad": {
+      "prevalence": 0.10460251046025104,
+      "wilson95": [
+        0.07186077766558438,
+        0.1498536655030709
+      ],
+      "baseline_assumed": 0.1,
+      "published_comparable": null
+    },
+    "clin_57_irritabilidad": {
+      "prevalence": 0.07531380753138076,
+      "wilson95": [
+        0.048167712364686414,
+        0.11589594881646184
+      ],
+      "baseline_assumed": 0.1,
+      "published_comparable": null
+    },
+    "clin_58_disartria": {
+      "prevalence": 0.008368200836820083,
+      "wilson95": [
+        0.002297870260448637,
+        0.029992574949255002
+      ],
+      "baseline_assumed": 0.008,
+      "published_comparable": null
+    },
+    "clin_59_ataxia": {
+      "prevalence": 0.016736401673640166,
+      "wilson95": [
+        0.006527215766825991,
+        0.04223488143930822
+      ],
+      "baseline_assumed": 0.009,
+      "published_comparable": null
+    },
+    "clin_60_polineuropatia_periferica": {
+      "prevalence": 0.008368200836820083,
+      "wilson95": [
+        0.002297870260448637,
+        0.029992574949255002
+      ],
+      "baseline_assumed": 0.02,
+      "published_comparable": null
+    },
+    "clin_61_adormecimiento": {
+      "prevalence": 0.06694560669456066,
+      "wilson95": [
+        0.041624101491289714,
+        0.10596790769342794
+      ],
+      "baseline_assumed": 0.05,
+      "published_comparable": null
+    },
+    "clin_62_temblor_distal": {
+      "prevalence": 0.02510460251046025,
+      "wilson95": [
+        0.011555319704640684,
+        0.053678429497924104
+      ],
+      "baseline_assumed": 0.025,
+      "published_comparable": null
+    },
+    "clin_63_disnea": {
+      "prevalence": 0.03347280334728033,
+      "wilson95": [
+        0.017056936058103298,
+        0.06464846514089205
+      ],
+      "baseline_assumed": 0.04,
+      "published_comparable": null
+    },
+    "clin_64_tos": {
+      "prevalence": 0.05439330543933055,
+      "wilson95": [
+        0.03205991872618863,
+        0.09082461246388318
+      ],
+      "baseline_assumed": 0.07,
+      "published_comparable": null
+    }
+  },
+  "spearman": {
+    "clin_35_nauseas": {
+      "hair": 0.0292841201631822,
+      "urine": 0.13729787189565332,
+      "blood": 0.013983374469744727
+    },
+    "clin_36_vomito": {
+      "hair": -0.014787241743148277,
+      "urine": 0.1663777973629323,
+      "blood": 0.09680666866175484
+    },
+    "clin_37_disfagia": {
+      "hair": 0.05931136864681184,
+      "urine": 0.07368812320339979,
+      "blood": 0.03321842985871111
+    },
+    "clin_38_gingivitis": {
+      "hair": 0.028375340058393542,
+      "urine": 0.15681384183376332,
+      "blood": 0.09569414948849304
+    },
+    "clin_39_salivacion_excesiva": {
+      "hair": -0.009497789487950683,
+      "urine": 0.14800464140181127,
+      "blood": 0.05610502031400183
+    },
+    "clin_40_estomatitis_mercurial": {
+      "hair": -0.013626193768401042,
+      "urine": 0.0885420673695687,
+      "blood": 0.016345167605406125
+    },
+    "clin_41_sabor_metalico": {
+      "hair": -0.003859003283836069,
+      "urine": 0.1768047304844703,
+      "blood": 0.07960799642740746
+    },
+    "clin_42_ribete_gilbert": {
+      "hair": -0.0015850239188071097,
+      "urine": 0.11716020674154845,
+      "blood": 0.04541438097799501
+    },
+    "clin_43_diente_letulle": {
+      "hair": 0.03270000915438796,
+      "urine": 0.11429665488672566,
+      "blood": 0.039203200468393824
+    },
+    "clin_44_hepatomegalia": {
+      "hair": 0.01960334858939708,
+      "urine": 0.03905682448315657,
+      "blood": -0.005545289738590918
+    },
+    "clin_45_hematuria": {
+      "hair": -0.015270365892586478,
+      "urine": 0.04566020473415681,
+      "blood": 0.04660580051406664
+    },
+    "clin_46_prurito": {
+      "hair": 0.034798597887663936,
+      "urine": 0.0950755912477559,
+      "blood": 0.07047046857402972
+    },
+    "clin_47_descamacion_piel": {
+      "hair": -0.015538839567497312,
+      "urine": 0.04620204730874292,
+      "blood": 0.011800921627575754
+    },
+    "clin_48_erupcion_cutanea": {
+      "hair": 0.024990862144582456,
+      "urine": 0.07697640666893965,
+      "blood": 0.04424523576097253
+    },
+    "clin_49_irritacion_ocular": {
+      "hair": 0.004187794655567441,
+      "urine": 0.06609762236368444,
+      "blood": 0.05703934350869857
+    },
+    "clin_50_conjuntivitis": {
+      "hair": -0.001809331664139448,
+      "urine": 0.022094524378662855,
+      "blood": -0.0004101151772049415
+    },
+    "clin_51_disminucion_campo_visual": {
+      "hair": 0.11828940746757588,
+      "urine": 0.052496763970285826,
+      "blood": 0.09624939095434364
+    },
+    "clin_52_opresion_ardor_torax": {
+      "hair": 0.010997413170962169,
+      "urine": 0.06514372115877796,
+      "blood": 0.0553098568216036
+    },
+    "clin_53_convulsiones": {
+      "hair": -0.013610771263337776,
+      "urine": 0.0061711919885742966,
+      "blood": -0.042856855035276836
+    },
+    "clin_54_disfuncion_renal": {
+      "hair": 0.03229139847253444,
+      "urine": 0.07111982202584552,
+      "blood": 0.05553286762597773
+    },
+    "clin_55_depresion": {
+      "hair": -0.016234035355020503,
+      "urine": 0.23027159117436022,
+      "blood": 0.09659733408978703
+    },
+    "clin_56_ansiedad": {
+      "hair": -0.02463762731474167,
+      "urine": 0.23291935178715284,
+      "blood": 0.12028275599413976
+    },
+    "clin_57_irritabilidad": {
+      "hair": 0.021960402976995464,
+      "urine": 0.2502335313562073,
+      "blood": 0.14943161702738597
+    },
+    "clin_58_disartria": {
+      "hair": 0.081173072226867,
+      "urine": -0.046735614189542515,
+      "blood": 0.03245219361850611
+    },
+    "clin_59_ataxia": {
+      "hair": 0.051908399667614825,
+      "urine": -0.03166144729498739,
+      "blood": 0.010417366630291722
+    },
+    "clin_60_polineuropatia_periferica": {
+      "hair": 0.07938523008828884,
+      "urine": 0.04670027305340886,
+      "blood": 0.03524966726291874
+    },
+    "clin_61_adormecimiento": {
+      "hair": 0.12169746615633846,
+      "urine": -0.04917758065111253,
+      "blood": 0.033260920015765444
+    },
+    "clin_62_temblor_distal": {
+      "hair": 0.12862289244412622,
+      "urine": 0.15535595376573957,
+      "blood": 0.11870890000595212
+    },
+    "clin_63_disnea": {
+      "hair": 0.015844183041856814,
+      "urine": 0.09321747461491782,
+      "blood": 0.08153530692202667
+    },
+    "clin_64_tos": {
+      "hair": -0.004676313121436536,
+      "urine": 0.11406652386086333,
+      "blood": 0.08787711146474987
+    }
+  },
+  "limitations": [
+    "KS against specified theoretical distribution, not published raw observations; p-values descriptive after calibration",
+    "No comparable published symptom prevalences or Spearman coefficients; cannot validate empirically",
+    "Random effects influence symptoms by design; correlation checks only upstream covariates, not proof of independence",
+    "All Y complete by oracle labeling; missing laboratory is not negative",
+    "EXT exposure inputs causally precede symptoms via biomarkers; no observed EXT or Y passed to clinical_layer"
+  ]
+}

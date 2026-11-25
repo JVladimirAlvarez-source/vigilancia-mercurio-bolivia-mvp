@@ -1,0 +1,12 @@
+﻿numpy
+pandas
+scipy
+pyarrow
+scikit-learn
+lightgbm
+shap
+hdbscan
+gower
+streamlit
+plotly
+joblib

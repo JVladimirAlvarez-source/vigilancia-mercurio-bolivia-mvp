@@ -1,0 +1,342 @@
+{
+  "shape": [
+    1500,
+    82
+  ],
+  "pipeline_shape": [
+    1500,
+    87
+  ],
+  "empirical_checks": {
+    "control": {
+      "hair": {
+        "anchor_median": 0.2,
+        "sim_median": 0.19718114971964576,
+        "sim_p75": 0.304868641996505,
+        "sim_p95": 0.4970020522359094
+      },
+      "urine": {
+        "anchor_median": 0.1835127987193455,
+        "sim_median": 0.17382867373434174,
+        "sim_p75": 0.3520993700471403,
+        "sim_p95": 0.7309929438539551
+      },
+      "blood": {
+        "anchor_median": 0.58,
+        "sim_median": 0.5584181949788762,
+        "sim_p75": 1.0035498036028723,
+        "sim_p95": 2.961983059127629
+      }
+    },
+    "MeHg": {
+      "hair": {
+        "anchor_median": 4.0,
+        "sim_median": 4.114527893392,
+        "sim_p75": 6.585460802425381,
+        "sim_p95": 13.467182326277312
+      },
+      "urine": {
+        "anchor_median": 0.55,
+        "sim_median": 0.5124160834310146,
+        "sim_p75": 0.8943539011711239,
+        "sim_p95": 2.1211066518889448
+      },
+      "blood": {
+        "anchor_median": 7.4,
+        "sim_median": 7.797581479561175,
+        "sim_p75": 12.62381703965152,
+        "sim_p95": 29.191259368193634
+      }
+    },
+    "mixto": {
+      "hair": {
+        "anchor_median": 1.6,
+        "sim_median": 1.7085542423558666,
+        "sim_p75": 2.8121589378851493,
+        "sim_p95": 5.549148233730753
+      },
+      "urine": {
+        "anchor_median": 3.9,
+        "sim_median": 4.0723790849600485,
+        "sim_p75": 11.622805865483556,
+        "sim_p95": 92.32004852283443
+      },
+      "blood": {
+        "anchor_median": 7.0,
+        "sim_median": 8.31536110431505,
+        "sim_p75": 14.883488167690247,
+        "sim_p95": 31.073788002668067
+      }
+    },
+    "Hg0": {
+      "hair": {
+        "anchor_median": 0.8,
+        "sim_median": 0.771562707477474,
+        "sim_p75": 1.3629220392200692,
+        "sim_p95": 3.4118273515245714
+      },
+      "urine": {
+        "anchor_median": 3.9,
+        "sim_median": 4.455399193006224,
+        "sim_p75": 15.35769239036598,
+        "sim_p95": 110.57294222562363
+      },
+      "blood": {
+        "anchor_median": 7.0,
+        "sim_median": 7.746331272688574,
+        "sim_p75": 14.203600003488571,
+        "sim_p95": 35.56684324293433
+      }
+    },
+    "Hg2": {
+      "hair": {
+        "anchor_median": 1.6,
+        "sim_median": 1.8081334522911665,
+        "sim_p75": 3.0252555659205633,
+        "sim_p95": 6.558163584644858
+      },
+      "urine": {
+        "anchor_median": 5.5,
+        "sim_median": 7.77431052801543,
+        "sim_p75": 22.745411326201012,
+        "sim_p95": 110.73870872074849
+      },
+      "blood": {
+        "anchor_median": 5.0,
+        "sim_median": 5.240584181846846,
+        "sim_p75": 11.023649440360206,
+        "sim_p95": 25.01722521251679
+      }
+    }
+  },
+  "clinical_beta0": {
+    "clin_35_nauseas": -3.2523252301403622,
+    "clin_36_vomito": -3.9933418311779194,
+    "clin_37_disfagia": -4.53276450166155,
+    "clin_38_gingivitis": -3.515047970380868,
+    "clin_39_salivacion_excesiva": -4.221961956341857,
+    "clin_40_estomatitis_mercurial": -5.501540226470696,
+    "clin_41_sabor_metalico": -4.024161484404451,
+    "clin_42_ribete_gilbert": -5.816358384969041,
+    "clin_43_diente_letulle": -5.849445450571547,
+    "clin_44_hepatomegalia": -4.835654523716475,
+    "clin_45_hematuria": -4.693236882858824,
+    "clin_46_prurito": -3.0106783554494325,
+    "clin_47_descamacion_piel": -3.983588410064437,
+    "clin_48_erupcion_cutanea": -3.5126701958527993,
+    "clin_49_irritacion_ocular": -3.1332122243458125,
+    "clin_50_conjuntivitis": -3.7010614425574935,
+    "clin_51_disminucion_campo_visual": -4.347550790456799,
+    "clin_52_opresion_ardor_torax": -3.8821330753423937,
+    "clin_53_convulsiones": -6.0815520461535995,
+    "clin_54_disfuncion_renal": -4.682189677872027,
+    "clin_55_depresion": -2.7573860779177424,
+    "clin_56_ansiedad": -2.5000697732543435,
+    "clin_57_irritabilidad": -2.505860104444628,
+    "clin_58_disartria": -5.181641826651403,
+    "clin_59_ataxia": -5.092959865818308,
+    "clin_60_polineuropatia_periferica": -4.252663803519022,
+    "clin_61_adormecimiento": -3.2699406150019965,
+    "clin_62_temblor_distal": -4.181063210271097,
+    "clin_63_disnea": -3.370795571862444,
+    "clin_64_tos": -2.785048870005978
+  },
+  "clinical_beta1_assumed": {
+    "clin_35_nauseas": 0.4,
+    "clin_36_vomito": 0.45,
+    "clin_37_disfagia": 0.45,
+    "clin_38_gingivitis": 0.45,
+    "clin_39_salivacion_excesiva": 0.45,
+    "clin_40_estomatitis_mercurial": 0.65,
+    "clin_41_sabor_metalico": 0.65,
+    "clin_42_ribete_gilbert": 0.5,
+    "clin_43_diente_letulle": 0.5,
+    "clin_44_hepatomegalia": 0.2,
+    "clin_45_hematuria": 0.35,
+    "clin_46_prurito": 0.35,
+    "clin_47_descamacion_piel": 0.35,
+    "clin_48_erupcion_cutanea": 0.35,
+    "clin_49_irritacion_ocular": 0.4,
+    "clin_50_conjuntivitis": 0.4,
+    "clin_51_disminucion_campo_visual": 0.65,
+    "clin_52_opresion_ardor_torax": 0.5,
+    "clin_53_convulsiones": 0.25,
+    "clin_54_disfuncion_renal": 0.25,
+    "clin_55_depresion": 0.45,
+    "clin_56_ansiedad": 0.45,
+    "clin_57_irritabilidad": 0.55,
+    "clin_58_disartria": 0.6,
+    "clin_59_ataxia": 0.75,
+    "clin_60_polineuropatia_periferica": 0.65,
+    "clin_61_adormecimiento": 0.65,
+    "clin_62_temblor_distal": 0.8,
+    "clin_63_disnea": 0.55,
+    "clin_64_tos": 0.55
+  },
+  "baseline_assumed": {
+    "clin_35_nauseas": 0.05,
+    "clin_36_vomito": 0.025,
+    "clin_37_disfagia": 0.015,
+    "clin_38_gingivitis": 0.04,
+    "clin_39_salivacion_excesiva": 0.02,
+    "clin_40_estomatitis_mercurial": 0.006,
+    "clin_41_sabor_metalico": 0.025,
+    "clin_42_ribete_gilbert": 0.004,
+    "clin_43_diente_letulle": 0.004,
+    "clin_44_hepatomegalia": 0.01,
+    "clin_45_hematuria": 0.012,
+    "clin_46_prurito": 0.06,
+    "clin_47_descamacion_piel": 0.025,
+    "clin_48_erupcion_cutanea": 0.04,
+    "clin_49_irritacion_ocular": 0.05,
+    "clin_50_conjuntivitis": 0.03,
+    "clin_51_disminucion_campo_visual": 0.018,
+    "clin_52_opresion_ardor_torax": 0.025,
+    "clin_53_convulsiones": 0.003,
+    "clin_54_disfuncion_renal": 0.012,
+    "clin_55_depresion": 0.08,
+    "clin_56_ansiedad": 0.1,
+    "clin_57_irritabilidad": 0.1,
+    "clin_58_disartria": 0.008,
+    "clin_59_ataxia": 0.009,
+    "clin_60_polineuropatia_periferica": 0.02,
+    "clin_61_adormecimiento": 0.05,
+    "clin_62_temblor_distal": 0.025,
+    "clin_63_disnea": 0.04,
+    "clin_64_tos": 0.07
+  },
+  "control_urine_censored_model_median": 0.1835127987193455,
+  "cohorts": {
+    "MeHg": 437,
+    "Hg0": 360,
+    "control": 239,
+    "mixto": 235,
+    "Hg2": 229
+  },
+  "missing_total": 0.16520325203252031,
+  "missing_by_column": {
+    "fecha_notificacion": 0.0,
+    "departamento": 0.0,
+    "municipio": 0.0,
+    "localidad_comunidad": 0.0,
+    "establecimiento_salud": 0.0,
+    "antecedente_exposicion_hg": 0.0,
+    "tipo_notificacion": 0.0,
+    "captado_en": 0.0,
+    "edad": 0.0,
+    "sexo": 0.0,
+    "EXT_10b_peso_corporal_kg": 0.07266666666666667,
+    "ocupacion": 0.0,
+    "procedencia": 0.0,
+    "residencia_actual": 0.0,
+    "embarazo_actual": 0.5866666666666667,
+    "lactancia_actual": 0.5866666666666667,
+    "numero_hijos": 0.5686666666666667,
+    "antecedente_aborto_espontaneo": 0.5686666666666667,
+    "fecha_exposicion": 0.0,
+    "antecedente_exposicion_anterior_anos": 0.082,
+    "lugar_probable_exposicion": 0.0,
+    "ocupacion_momento_exposicion": 0.0,
+    "tiempo_exposicion_horas_equiv": 0.0,
+    "EXT_27b_quema_amalgama_frecuencia": 0.0,
+    "EXT_27c_quema_espacio_cerrado_o_vivienda": 0.5186666666666667,
+    "EXT_27d_uso_retorta": 0.4613333333333333,
+    "via_respiratoria": 0.0,
+    "via_dermica": 0.0,
+    "via_oral": 0.0,
+    "via_desconocida": 0.0,
+    "tipo_ocupacional": 0.0,
+    "tipo_accidental": 0.0,
+    "tipo_ambiental": 0.0,
+    "presencia_empresas_mineras": 0.0,
+    "consumo_pescado_rio": 0.0,
+    "frecuencia_consumo_pescado_dias": 0.0,
+    "EXT_32b_especies_piscivoras_alto_hg": 0.0,
+    "EXT_32c_frecuencia_piscivoros_30d": 0.0,
+    "EXT_32d_tamano_porcion_gramos": 0.07733333333333334,
+    "antecedente_familiar_mineria": 0.0,
+    "tipo_parentesco": 0.49666666666666665,
+    "clin_35_nauseas": 0.08333333333333333,
+    "clin_36_vomito": 0.092,
+    "clin_37_disfagia": 0.082,
+    "clin_38_gingivitis": 0.09533333333333334,
+    "clin_39_salivacion_excesiva": 0.078,
+    "clin_40_estomatitis_mercurial": 0.08466666666666667,
+    "clin_41_sabor_metalico": 0.08733333333333333,
+    "clin_42_ribete_gilbert": 0.08133333333333333,
+    "clin_43_diente_letulle": 0.06866666666666667,
+    "clin_44_hepatomegalia": 0.09666666666666666,
+    "clin_45_hematuria": 0.08333333333333333,
+    "clin_46_prurito": 0.10466666666666667,
+    "clin_47_descamacion_piel": 0.08666666666666667,
+    "clin_48_erupcion_cutanea": 0.07866666666666666,
+    "clin_49_irritacion_ocular": 0.08,
+    "clin_50_conjuntivitis": 0.08266666666666667,
+    "clin_51_disminucion_campo_visual": 0.104,
+    "clin_52_opresion_ardor_torax": 0.07666666666666666,
+    "clin_53_convulsiones": 0.10466666666666667,
+    "clin_54_disfuncion_renal": 0.09466666666666666,
+    "clin_55_depresion": 0.102,
+    "clin_56_ansiedad": 0.114,
+    "clin_57_irritabilidad": 0.102,
+    "clin_58_disartria": 0.09466666666666666,
+    "clin_59_ataxia": 0.094,
+    "clin_60_polineuropatia_periferica": 0.094,
+    "clin_61_adormecimiento": 0.09733333333333333,
+    "clin_62_temblor_distal": 0.1,
+    "clin_63_disnea": 0.104,
+    "clin_64_tos": 0.10666666666666667,
+    "EXT_64b_fecha_inicio_sintomas": 0.244,
+    "tipo_muestra": 0.19066666666666668,
+    "fecha_toma_muestra": 0.19066666666666668,
+    "fecha_envio_lab": 0.19066666666666668,
+    "EXT_67b_concentracion_hg_resultado": 0.19066666666666668,
+    "EXT_67c_unidad_medida": 0.19066666666666668,
+    "EXT_67d_longitud_segmento_cabello_cm": 0.576,
+    "lab_hg_cabello_ug_g": 0.576,
+    "lab_hg_orina_ug_g_cr": 0.542,
+    "lab_hg_sangre_ug_l": 0.6326666666666667,
+    "clasificacion_guia537": 0.0,
+    "y_mehg_cabello_bolivia": 0.0,
+    "y_mehg_cabello_5": 0.0,
+    "y_hg_urinario_hbm2": 0.0,
+    "y_hg_urinario_guia537": 0.0,
+    "flag_anomalia_real": 0.0
+  },
+  "targets": {
+    "y_mehg_cabello_bolivia": {
+      "n_observed": 1500,
+      "positive_rate": 0.2753333333333333
+    },
+    "y_mehg_cabello_5": {
+      "n_observed": 1500,
+      "positive_rate": 0.14266666666666666
+    },
+    "y_hg_urinario_hbm2": {
+      "n_observed": 1500,
+      "positive_rate": 0.11666666666666667
+    },
+    "y_hg_urinario_guia537": {
+      "n_observed": 1500,
+      "positive_rate": 0.059333333333333335
+    },
+    "flag_anomalia_real": {
+      "n_observed": 1500,
+      "positive_rate": 0.06466666666666666
+    }
+  },
+  "classification": {
+    "Probable_simulado": 964,
+    "No_clasificado_simulado": 529,
+    "Confirmado_simulado": 7
+  },
+  "anomalies": 97,
+  "measured_rows": 1214,
+  "hair_median_dietary_clean": 4.114527893392,
+  "children": 276,
+  "fertile": 620,
+  "pregnant": 103,
+  "lactating": 65,
+  "checks": "PASS: schema, temporal order, nested targets, feature exclusion, class support, exposure consistency",
+  "target_semantics": "All Y biomarker thresholds are synthetic oracle labels, not measured diagnoses. Use Y_observabilidad for realistic supervised evaluation."
+}
