@@ -1,11 +1,5 @@
-﻿@"
-# Vigilancia Inteligente de Intoxicación por Mercurio — Bolivia (MVP)
-
-Sistema de apoyo a la decisión clínica, vigilancia epidemiológica y auditoría preanalítica basado en la **Guía Técnica N.º 537 (Ministerio de Salud y Deportes de Bolivia, 2024)**.
-
----
-
-## 1. Construcción del Dataset Sintético (`N = 1,500`, `seed = 42`)
+﻿
+#  Construcción del Dataset Sintético (`N = 1,500`, `seed = 42`)
 
 Ante la ausencia de microdatos clínicos públicos en Bolivia, los datos (`ficha_mercurio_bolivia_v2.csv`, 87 columnas) se generaron mediante **simulación estocástica causal por variables latentes** para garantizar coherencia biológica y evitar filas aleatorias sin sentido clínico:
 
@@ -88,5 +82,5 @@ Campello, R. J., Moulavi, D., & Sander, J. (2013). Density-based clustering (HDB
 
 Liu, F. T., Ting, K. M., & Zhou, Z. H. (2008). Isolation Forest. IEEE ICDM, 413–422. https://doi.org/10.1109/ICDM.2008.17
 
-"@ | Out-File -Encoding utf8 README.md
+
 
