@@ -1,0 +1,97 @@
+{
+  "n": 1500,
+  "identity_key": "row_id",
+  "one_to_one": true,
+  "partitions": {
+    "train": 1050,
+    "test": 225,
+    "validation": 225
+  },
+  "no_prelab_leakage": true,
+  "raw_matrix_parity": true,
+  "lab_eligible_total": 1214,
+  "lab_eligible_by_split": {
+    "train": 850,
+    "validation": 187,
+    "test": 177
+  },
+  "target_distribution": {
+    "y_mehg_cabello_bolivia": {
+      "train": {
+        "negativos": 747,
+        "positivos": 303,
+        "ausentes": 0
+      },
+      "validation": {
+        "negativos": 159,
+        "positivos": 66,
+        "ausentes": 0
+      },
+      "test": {
+        "negativos": 181,
+        "positivos": 44,
+        "ausentes": 0
+      }
+    },
+    "y_mehg_cabello_5": {
+      "train": {
+        "negativos": 890,
+        "positivos": 160,
+        "ausentes": 0
+      },
+      "validation": {
+        "negativos": 195,
+        "positivos": 30,
+        "ausentes": 0
+      },
+      "test": {
+        "negativos": 201,
+        "positivos": 24,
+        "ausentes": 0
+      }
+    },
+    "y_hg_urinario_hbm2": {
+      "train": {
+        "negativos": 926,
+        "positivos": 124,
+        "ausentes": 0
+      },
+      "validation": {
+        "negativos": 198,
+        "positivos": 27,
+        "ausentes": 0
+      },
+      "test": {
+        "negativos": 201,
+        "positivos": 24,
+        "ausentes": 0
+      }
+    },
+    "y_hg_urinario_guia537": {
+      "train": {
+        "negativos": 986,
+        "positivos": 64,
+        "ausentes": 0
+      },
+      "validation": {
+        "negativos": 216,
+        "positivos": 9,
+        "ausentes": 0
+      },
+      "test": {
+        "negativos": 209,
+        "positivos": 16,
+        "ausentes": 0
+      }
+    }
+  },
+  "target_origin": "Etiquetas sintéticas del simulador; incluyen resultados contrafactuales.",
+  "sha256": {
+    "ficha_mercurio_bolivia_v2.csv": "833107168c061df5568c1f38340f77687c979ca96822379e8ad23c0e2bb0d2ca",
+    "X_M1.csv": "27d468eee81035f3e8e3830ea123c39edb1d9145caacdf51980725429b0cf08c",
+    "X_M3A.csv": "27d468eee81035f3e8e3830ea123c39edb1d9145caacdf51980725429b0cf08c",
+    "X_M3B.csv": "eab33b35f6a1849598b110499f5a7b8e469e7368789e0a8c4f13149bd624ce0d",
+    "Y.csv": "50b0c711d381b10955350e9829fa025d0ff03c3b2fcbed331fe92ed2850fc31d",
+    "auditoria_latente_NO_ENTRENAR.csv": "bd885289428f0918347fa95fd7eaaa889676644ce30df6603b1c32ea800ff465"
+  }
+}
