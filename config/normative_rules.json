@@ -1,0 +1,68 @@
+{
+  "reference": "Guía Técnica N.º 537 (2024), §15.2 p. 36; §9 y Cuadro 1 pp. 28–30; §10.5, Cuadros 2–3 p. 32",
+  "status": "Caso probable y confirmado definidos en §15.2. Sospechoso operativo del MVP para evaluación pendiente. Umbrales de referencia del Cuadro 3.",
+  "confirmation": {
+    "blood_upper_ug_l": 20,
+    "urine_ug_g": 50,
+    "operator": ">",
+    "requires_validated_blood_and_urine": true
+  },
+  "fertile_age_years": [
+    15,
+    49
+  ],
+  "fish_reference": {
+    "piscivorous_total_hg_ug_g": 1.9,
+    "other_total_hg_ug_g": 0.25,
+    "mehg_fraction": 0.9,
+    "source": "Loayza et al., río Beni, DOI 10.1016/j.jfca.2025.108840 (valor de referencia citado por el simulador). 0,25 y 90 % son supuestos del MVP."
+  },
+  "official_states": [
+    "Probable",
+    "Confirmado"
+  ],
+  "operational_states": [
+    "Sospechoso",
+    "No cumple criterios / info insuficiente"
+  ],
+  "biomarker_references": {
+    "cabello_ug_g": {
+      "FAO/OPS 2007": 3,
+      "EPA 2001": 1
+    },
+    "sangre_ug_l": {
+      "OMS 2008": "<10–20"
+    },
+    "orina_ug_g": {
+      "OMS 2008": "<50"
+    },
+    "cordon_ug_l": {
+      "EPA": "<5.8"
+    }
+  },
+  "epidemiology": {
+    "any_of": [
+      "antecedente_exposicion_hg",
+      "procedencia_zona_riesgo_hg"
+    ],
+    "reference": "§15.2, p. 36"
+  },
+  "clinical": {
+    "cardinal": [
+      "eretismo",
+      "temblor",
+      "gingivitis"
+    ],
+    "reference": "§9 y Cuadro 1, pp. 28–30"
+  },
+  "priority": {
+    "groups": [
+      "mujeres en edad fértil",
+      "embarazadas y exposición fetal",
+      "niños y adolescentes",
+      "exposición crónica sistemática"
+    ],
+    "reference": "§6.1, pp. 24–25; lactancia: Cuadro 2, p. 32, matriz de exposición"
+  },
+  "fertile_age_years_note": "Rango operativo del MVP; la guía no fija límites numéricos en §6.1."
+}

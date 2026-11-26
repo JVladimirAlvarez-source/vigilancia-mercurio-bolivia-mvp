@@ -1,0 +1,201 @@
+{
+  "clusters": 4,
+  "train_counts": {
+    "-1": 717,
+    "3": 203,
+    "1": 31,
+    "2": 55,
+    "0": 44
+  },
+  "insufficient_shared_coverage_pairs_train": 0,
+  "medoid_radii_p90": {
+    "0": 0.1141548257281568,
+    "1": 0.09309350724579715,
+    "2": 0.05185307224000511,
+    "3": 0.09659188671883619
+  },
+  "validation_counts": {
+    "-1": 120,
+    "0": 27,
+    "3": 51,
+    "2": 14,
+    "1": 13
+  },
+  "test_counts": {
+    "-1": 119,
+    "3": 50,
+    "0": 20,
+    "1": 17,
+    "2": 19
+  },
+  "biomarcadores_externos": {
+    "validation": {
+      "-1": {
+        "lab_hg_cabello_ug_g": {
+          "n": 45,
+          "mediana": 3.26
+        },
+        "lab_hg_orina_ug_g_cr": {
+          "n": 68,
+          "mediana": 2.96
+        },
+        "lab_hg_sangre_ug_l": {
+          "n": 47,
+          "mediana": 8.29
+        }
+      },
+      "0": {
+        "lab_hg_cabello_ug_g": {
+          "n": 10,
+          "mediana": 1.125
+        },
+        "lab_hg_orina_ug_g_cr": {
+          "n": 12,
+          "mediana": 3.535
+        },
+        "lab_hg_sangre_ug_l": {
+          "n": 8,
+          "mediana": 10.575
+        }
+      },
+      "1": {
+        "lab_hg_cabello_ug_g": {
+          "n": 2,
+          "mediana": 1.1400000000000001
+        },
+        "lab_hg_orina_ug_g_cr": {
+          "n": 9,
+          "mediana": 22.95
+        },
+        "lab_hg_sangre_ug_l": {
+          "n": 8,
+          "mediana": 6.69
+        }
+      },
+      "2": {
+        "lab_hg_cabello_ug_g": {
+          "n": 1,
+          "mediana": 0.14
+        },
+        "lab_hg_orina_ug_g_cr": {
+          "n": 4,
+          "mediana": 0.32
+        },
+        "lab_hg_sangre_ug_l": {
+          "n": 2,
+          "mediana": 1.0050000000000001
+        }
+      },
+      "3": {
+        "lab_hg_cabello_ug_g": {
+          "n": 33,
+          "mediana": 6.04
+        },
+        "lab_hg_orina_ug_g_cr": {
+          "n": 14,
+          "mediana": 0.6599999999999999
+        },
+        "lab_hg_sangre_ug_l": {
+          "n": 18,
+          "mediana": 5.865
+        }
+      }
+    },
+    "test": {
+      "-1": {
+        "lab_hg_cabello_ug_g": {
+          "n": 45,
+          "mediana": 1.71
+        },
+        "lab_hg_orina_ug_g_cr": {
+          "n": 68,
+          "mediana": 6.42
+        },
+        "lab_hg_sangre_ug_l": {
+          "n": 49,
+          "mediana": 5.27
+        }
+      },
+      "0": {
+        "lab_hg_cabello_ug_g": {
+          "n": 6,
+          "mediana": 1.46
+        },
+        "lab_hg_orina_ug_g_cr": {
+          "n": 12,
+          "mediana": 3.105
+        },
+        "lab_hg_sangre_ug_l": {
+          "n": 11,
+          "mediana": 8.11
+        }
+      },
+      "1": {
+        "lab_hg_cabello_ug_g": {
+          "n": 6,
+          "mediana": 0.6699999999999999
+        },
+        "lab_hg_orina_ug_g_cr": {
+          "n": 10,
+          "mediana": 5.515000000000001
+        },
+        "lab_hg_sangre_ug_l": {
+          "n": 5,
+          "mediana": 2.68
+        }
+      },
+      "2": {
+        "lab_hg_cabello_ug_g": {
+          "n": 5,
+          "mediana": 0.24
+        },
+        "lab_hg_orina_ug_g_cr": {
+          "n": 6,
+          "mediana": 0.305
+        },
+        "lab_hg_sangre_ug_l": {
+          "n": 7,
+          "mediana": 0.9
+        }
+      },
+      "3": {
+        "lab_hg_cabello_ug_g": {
+          "n": 25,
+          "mediana": 5.49
+        },
+        "lab_hg_orina_ug_g_cr": {
+          "n": 14,
+          "mediana": 0.6799999999999999
+        },
+        "lab_hg_sangre_ug_l": {
+          "n": 13,
+          "mediana": 6.29
+        }
+      }
+    }
+  },
+  "comparacion_FEN_A": {
+    "clusters": 2,
+    "train_counts": {
+      "-1": 400,
+      "0": 626,
+      "1": 24
+    },
+    "insufficient_shared_coverage_pairs_train": 15,
+    "medoid_radii_p90": {
+      "0": 0.04440154440154442,
+      "1": 0.03151709401709404
+    },
+    "validation_counts": {
+      "-1": 79,
+      "0": 135,
+      "1": 11
+    },
+    "test_counts": {
+      "0": 147,
+      "-1": 71,
+      "1": 7
+    }
+  },
+  "representacion_publicada": "FEN-B"
+}

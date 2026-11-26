@@ -9,3 +9,9 @@ env/
 # Datos temporales o pesados
 *.parquet
 .DS_Store
+
+# Entradas reproducibles y artefactos locales del backend
+/data/
+/models/
+/reports/
+.pytest_cache/

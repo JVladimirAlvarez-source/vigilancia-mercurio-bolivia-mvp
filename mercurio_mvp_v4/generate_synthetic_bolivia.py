@@ -84,7 +84,7 @@ def perturbation_layer(r,capture,position,hidden=0):
  """FUENTE: Rubin 1976 DOI 10.1093/biomet/63.3.581 (mechanism only). FALLBACK: rates unmeasured locally."""
  return r.random(len(capture))<expit(-3.0+.8*capture+.6*position+.55*hidden)
 
-def generate(out):
+def generate(out, *, keyed=False):
  r=np.random.default_rng(SEED); n=N
  def bern(p): return (r.random(n)<p).astype(int)
  def logn(m,s): return np.exp(np.log(m)+s*r.normal(size=n))
@@ -178,7 +178,17 @@ def generate(out):
  perm=r.permutation(n); split=np.full(n,'train',object); split[perm[1050:1275]]='validation'; split[perm[1275:]]='test'
  audit=pd.DataFrame({'row_id':np.arange(n),'split':split,'escenario_latente':pd.Series(g).map(COHORT_LABELS),'talla_cm':height,'imc':bmi,'EXT_anomalia_tipo':kinds,'hair_available':available[:,0],'urine_available':available[:,1],'blood_available':available[:,2],'anomalia_tipo':kinds,'hair_clean':true[:,0],'urine_clean':true[:,1],'blood_clean':true[:,2],'edi_latente':edi,'vulnerable':child|fertile|preg|lact,'stress_tail_assumed':stress})
  files={'ficha_mercurio_bolivia_v2':official,'pipeline_87_campos':df,'X_M1':df[FEATURES],'X_M3A':df[FEATURES],'X_M3B':df[FEATURES+[c for c in LAB if c.startswith('lab_')]],'Y':df[Y], 'Y_observabilidad':pd.DataFrame(dict(zip(Y[1:5],[available[:,0],available[:,0],available[:,1],available[:,1]]))),'auditoria_latente_NO_ENTRENAR':audit}
- for name,frame in files.items(): frame.to_csv(out/(name+'.csv'),index=False)
+ # Export the same source identity with each record before serialization.
+ row_id=official['nombre_apellido'].str.removeprefix('SINTETICO_').astype(int)
+ for name,frame in files.items():
+  if keyed:
+   if name=='ficha_mercurio_bolivia_v2':
+    frame=frame.assign(**{c: df[c] for c in LAB if c.startswith('lab_')})
+   if name=='auditoria_latente_NO_ENTRENAR':
+    frame=frame.assign(row_id=row_id,flag_anomalia_real=flags)
+   else:
+    frame=frame.assign(row_id=row_id)[['row_id',*frame.columns]]
+  frame.to_csv(out/(name+'.csv'),index=False)
  try: official.to_parquet(out/'ficha_mercurio_bolivia_v2.parquet',index=False)
  except ImportError: warnings.warn('Parquet no generado: instalar pyarrow o fastparquet y volver a ejecutar.')
  assert df.shape==(1500,len(PRE)+len(LAB)+len(Y)) and df.columns.is_unique
@@ -220,10 +230,10 @@ def validate_fidelity(official,df,true,g,anchors,symptoms,shared,individual,base
  maxnoise=float(np.max(np.abs(rc)))
  return {'summary':{'structural_assertions':'PASS','max_abs_symptom_biomarker_spearman':maxrho,'max_abs_noise_upstream_pearson':maxnoise,'noise_threshold_0_05_pass':maxnoise<.05,'empirical_validation':'NOT ESTABLISHED','targets_null':int(df[Y].isna().sum().sum()),'anomalies':int(flags.sum()),'measured':int(available.any(axis=1).sum())},'continuous':continuous,'binary_controls':binary,'spearman':{c:dict(zip(['hair','urine','blood'],map(float,row))) for c,row in zip(CLIN,rho)},'limitations':['KS against specified theoretical distribution, not published raw observations; p-values descriptive after calibration','No comparable published symptom prevalences or Spearman coefficients; cannot validate empirically','Random effects influence symptoms by design; correlation checks only upstream covariates, not proof of independence','All Y complete by oracle labeling; missing laboratory is not negative','EXT exposure inputs causally precede symptoms via biomarkers; no observed EXT or Y passed to clinical_layer']}
 if __name__=='__main__':
- p=argparse.ArgumentParser(); p.add_argument('--out',type=Path,default=Path('.')); p.add_argument('--verify-reproducibility',action='store_true'); args=p.parse_args(); generate(args.out)
+ p=argparse.ArgumentParser(); p.add_argument('--out',type=Path,default=Path('.')); p.add_argument('--verify-reproducibility',action='store_true'); p.add_argument('--keyed',action='store_true'); args=p.parse_args(); generate(args.out,keyed=args.keyed)
  if args.verify_reproducibility:
   with tempfile.TemporaryDirectory() as tmp:
-   generate(Path(tmp)); names=['ficha_mercurio_bolivia_v2.csv','Y.csv','X_M1.csv','X_M3A.csv','X_M3B.csv','auditoria_latente_NO_ENTRENAR.csv','Y_observabilidad.csv']
+   generate(Path(tmp),keyed=args.keyed); names=['ficha_mercurio_bolivia_v2.csv','Y.csv','X_M1.csv','X_M3A.csv','X_M3B.csv','auditoria_latente_NO_ENTRENAR.csv','Y_observabilidad.csv']
    if (args.out/'ficha_mercurio_bolivia_v2.parquet').exists(): names.append('ficha_mercurio_bolivia_v2.parquet')
    for name in names: assert (args.out/name).read_bytes()==(Path(tmp)/name).read_bytes(),name
    meta=args.out/'metadata.json'; data=json.loads(meta.read_text()); data['reproducibility']={'bitwise_equal':True,'files':names}; meta.write_text(json.dumps(data,indent=2,ensure_ascii=False)); print('REPRODUCIBILITY PASS')

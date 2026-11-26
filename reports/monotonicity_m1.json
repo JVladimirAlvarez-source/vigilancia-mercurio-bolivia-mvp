@@ -1,0 +1,32 @@
+{
+  "validation": {
+    "y_mehg_cabello_bolivia": 0,
+    "y_mehg_cabello_5": 29,
+    "y_hg_urinario_guia537": 115
+  },
+  "test": {
+    "y_mehg_cabello_bolivia": 0,
+    "y_mehg_cabello_5": 48,
+    "y_hg_urinario_guia537": 127
+  },
+  "validation_alertas_umbrales_independientes": {
+    "y_mehg_cabello_bolivia": 0,
+    "y_mehg_cabello_5": 28,
+    "y_hg_urinario_guia537": 0
+  },
+  "validation_alertas": {
+    "y_mehg_cabello_bolivia": 0,
+    "y_mehg_cabello_5": 0,
+    "y_hg_urinario_guia537": 0
+  },
+  "test_alertas_umbrales_independientes": {
+    "y_mehg_cabello_bolivia": 1,
+    "y_mehg_cabello_5": 34,
+    "y_hg_urinario_guia537": 0
+  },
+  "test_alertas": {
+    "y_mehg_cabello_bolivia": 0,
+    "y_mehg_cabello_5": 0,
+    "y_hg_urinario_guia537": 0
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "validation": {
+    "precision": 0.36538461538461536,
+    "recall": 0.9047619047619048,
+    "pr_auc": 0.782219679368047,
+    "specificity": 0.8012048192771084,
+    "confusion_matrix": [
+      [
+        133,
+        33
+      ],
+      [
+        2,
+        19
+      ]
+    ],
+    "alert_rate": 0.27807486631016043
+  },
+  "test": {
+    "precision": 0.2571428571428571,
+    "recall": 0.8181818181818182,
+    "pr_auc": 0.6820997184633548,
+    "specificity": 0.8433734939759037,
+    "confusion_matrix": [
+      [
+        140,
+        26
+      ],
+      [
+        2,
+        9
+      ]
+    ],
+    "alert_rate": 0.1977401129943503
+  },
+  "umbral": 0.4092014390629261,
+  "n_train": 850,
+  "n_validation": 187,
+  "n_test": 177,
+  "features": [
+    "lab_hg_cabello_ug_g",
+    "lab_hg_orina_ug_g_cr",
+    "lab_hg_sangre_ug_l",
+    "lab_hg_cabello_ug_g_residual",
+    "lab_hg_orina_ug_g_cr_residual",
+    "lab_hg_sangre_ug_l_residual",
+    "ratio_hg_cabello_vs_exposicion_dietetica",
+    "ratio_hg_orina_vs_exposicion_inhalatoria",
+    "indice_discordancia_asintomatico_extremo",
+    "flag_incoherencia_matriz_via",
+    "segmento_cabello_cm",
+    "dias_envio_lab"
+  ]
+}
