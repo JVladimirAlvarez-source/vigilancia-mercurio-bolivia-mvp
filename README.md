@@ -109,9 +109,7 @@ Opera **únicamente sobre registros con laboratorio disponible dentro de `train`
 
 ---
 
-## 3. Reglas de Implementación para Codex y Colaboradores
-
-Si vas a delegar tareas a **Codex** o modificar el entrenamiento en este repositorio, cumple estas **5 reglas obligatorias**:
+## 3. Reglas de Implementación y colaboracion
 
 1. **Unión por ID y particiones fijas:** Cruza `ficha_mercurio_bolivia_v2.csv`, `X_M1.csv`, `X_M3A.csv`, `X_M3B.csv`, `Y.csv` y `auditoria_latente_NO_ENTRENAR.csv` exclusivamente por `ID` único (`N = 1,500`; `1,050 train / 225 val / 225 test`, `seed = 42`). Nunca uses columnas de `auditoria_latente_NO_ENTRENAR.csv` como features.
 2. **Cero *Training-Serving Skew*:** Todo preprocesamiento (cuantiles $Q_{0{,}05}/Q_{0{,}95}$, medianas condicionales de `M3B`, codificadores) debe ajustarse **solo en `train`**, serializarse en `models/` y aplicarse mediante `transform_record()` en `src/features_pipeline.py`.
@@ -143,8 +141,8 @@ vigilancia_mercurio_bolivia/
 └── tests/     
 ```
 
-# Suite pytest (normativa, features, inferencia)
-PowerShell
+
+```powershell
 # Ejecución completa en Windows (PowerShell)
 python -m venv .venv
 .\.venv\Scripts\Activate.ps1
@@ -153,6 +151,10 @@ python src/audit_data.py
 python src/train_models.py
 pytest -v
 streamlit run app/app.py
+
+```
+
+---
 
 # 5. Referencias Científicas y Normativas
 
