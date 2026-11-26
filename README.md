@@ -2,7 +2,7 @@
 
 Sistema de soporte a la decisión clínica, fenotipado computacional y auditoría preanalítica alineado con la **Guía Técnica N.º 537 (Ministerio de Salud y Deportes de Bolivia, 2024)**.
 
-> **Propósito de este documento:** Este `README.md` funciona simultáneamente como **documentación científica** y como **contrato de ingeniería de contexto** para agentes de código (Codex) y colaboradores. Define la arquitectura exacta de separación de datos, las ecuaciones de *Feature Engineering* y los guardarraíles contra *data leakage* necesarios para entrenar, auditar y desplegar el sistema sin percances.
+> **Propósito de este documento:** Este `README.md` funciona simultáneamente como **documentación científica** y como **contrato de ingeniería de contexto** para colaboradores. Define la arquitectura exacta de separación de datos, las ecuaciones de *Feature Engineering* y los guardarraíles contra *data leakage* necesarios para entrenar, auditar y desplegar el sistema sin percances.
 
 ---
 
