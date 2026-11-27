@@ -1,0 +1,2189 @@
+{
+  "capture_contract_version": "0.1.0",
+  "status": "candidate_not_runtime_validated",
+  "backend_commit": "56408ec57c98006cfc37df4e3fa3d5ce10867927",
+  "backend_contract_version": 2,
+  "canonical_sources": [
+    "config/schema.json",
+    "config/feature_config.json",
+    "config/normative_rules.json"
+  ],
+  "counts": {
+    "raw_fields": 82,
+    "scientific_extensions": 11,
+    "clinical_fields": 30,
+    "prelab_inputs": 63
+  },
+  "missing_states": [
+    "observed",
+    "unknown",
+    "not_recorded",
+    "not_evaluated",
+    "not_applicable",
+    "pending",
+    "refused"
+  ],
+  "fields": [
+    {
+      "field_id": "fecha_notificacion",
+      "label": "Fecha de notificación",
+      "section": "notificacion",
+      "source": "official_mapping_pending",
+      "capture_type": "date",
+      "nullable": true,
+      "required_to_finalize": true,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "derived_context",
+        "M2": "community_aggregation",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification"
+    },
+    {
+      "field_id": "departamento",
+      "label": "Departamento",
+      "section": "notificacion",
+      "source": "official_mapping_pending",
+      "capture_type": "text",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "restricted_location",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "excluded",
+        "M2": "community_aggregation",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification"
+    },
+    {
+      "field_id": "municipio",
+      "label": "Municipio",
+      "section": "notificacion",
+      "source": "official_mapping_pending",
+      "capture_type": "text",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "restricted_location",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "excluded",
+        "M2": "community_aggregation",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification"
+    },
+    {
+      "field_id": "localidad_comunidad",
+      "label": "Localidad / comunidad",
+      "section": "notificacion",
+      "source": "official_mapping_pending",
+      "capture_type": "text",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "restricted_location",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "excluded",
+        "M2": "community_aggregation",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification"
+    },
+    {
+      "field_id": "establecimiento_salud",
+      "label": "Establecimiento de salud",
+      "section": "notificacion",
+      "source": "official_mapping_pending",
+      "capture_type": "text",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "restricted_location",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "excluded",
+        "M2": "community_aggregation",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification"
+    },
+    {
+      "field_id": "antecedente_exposicion_hg",
+      "label": "Antecedente de exposición confirmada a Hg",
+      "section": "notificacion",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "tipo_notificacion",
+      "label": "Tipo de notificación",
+      "section": "notificacion",
+      "source": "official_mapping_pending",
+      "capture_type": "select",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "excluded",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "display_choices": [
+        "Vigilancia pasiva",
+        "Búsqueda activa",
+        "Situación de riesgo",
+        "Otro"
+      ],
+      "encoding_status": "verify exact category spelling before export"
+    },
+    {
+      "field_id": "captado_en",
+      "label": "Captado en",
+      "section": "notificacion",
+      "source": "official_mapping_pending",
+      "capture_type": "select",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "excluded",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "display_choices": [
+        "Emergencia",
+        "Consulta externa",
+        "Hospitalización",
+        "Otro"
+      ],
+      "encoding_status": "verify exact category spelling before export"
+    },
+    {
+      "field_id": "edad",
+      "label": "Edad (años)",
+      "section": "paciente",
+      "source": "official_mapping_pending",
+      "capture_type": "number",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "community_aggregation",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "backend_range": [
+        0,
+        120
+      ],
+      "nlp_aliases": [
+        "años de edad"
+      ]
+    },
+    {
+      "field_id": "sexo",
+      "label": "Sexo registrado",
+      "section": "paciente",
+      "source": "official_mapping_pending",
+      "capture_type": "select",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "community_aggregation",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "choices": [
+        "F",
+        "M"
+      ]
+    },
+    {
+      "field_id": "EXT_10b_peso_corporal_kg",
+      "label": "Peso corporal (kg)",
+      "section": "paciente",
+      "source": "extension_scientific",
+      "capture_type": "number",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "extension_not_official",
+      "backend_range": [
+        1,
+        350
+      ]
+    },
+    {
+      "field_id": "ocupacion",
+      "label": "Ocupación",
+      "section": "paciente",
+      "source": "official_mapping_pending",
+      "capture_type": "category",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "choices_source": "artifacts.transformers.m1 vocabulary; preserve original if out of vocabulary"
+    },
+    {
+      "field_id": "procedencia",
+      "label": "Procedencia",
+      "section": "paciente",
+      "source": "official_mapping_pending",
+      "capture_type": "text",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "excluded",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification"
+    },
+    {
+      "field_id": "residencia_actual",
+      "label": "Residencia actual",
+      "section": "paciente",
+      "source": "official_mapping_pending",
+      "capture_type": "text",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "restricted_identifier_or_free_text",
+      "nlp_mode": "disabled",
+      "storage": "private",
+      "model_roles": {
+        "M1": "excluded",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification"
+    },
+    {
+      "field_id": "embarazo_actual",
+      "label": "Embarazo actual",
+      "section": "paciente",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "community_aggregation",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ],
+      "nlp_aliases": [
+        "embarazada"
+      ]
+    },
+    {
+      "field_id": "lactancia_actual",
+      "label": "Lactancia actual",
+      "section": "paciente",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "community_aggregation",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ],
+      "nlp_aliases": [
+        "lactancia"
+      ]
+    },
+    {
+      "field_id": "numero_hijos",
+      "label": "Número de hijos",
+      "section": "paciente",
+      "source": "official_mapping_pending",
+      "capture_type": "integer",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification"
+    },
+    {
+      "field_id": "antecedente_aborto_espontaneo",
+      "label": "Antecedente de aborto espontáneo",
+      "section": "paciente",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "fecha_exposicion",
+      "label": "Fecha de exposición",
+      "section": "exposicion",
+      "source": "official_mapping_pending",
+      "capture_type": "partial_date",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification"
+    },
+    {
+      "field_id": "antecedente_exposicion_anterior_anos",
+      "label": "Antecedente de exposición anterior (años)",
+      "section": "exposicion",
+      "source": "official_mapping_pending",
+      "capture_type": "number",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "semantic_note": "Do not infer whether cumulative or elapsed; retain original response."
+    },
+    {
+      "field_id": "lugar_probable_exposicion",
+      "label": "Lugar probable de exposición",
+      "section": "exposicion",
+      "source": "official_mapping_pending",
+      "capture_type": "category",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "choices_source": "artifacts.transformers.m1 vocabulary; preserve original if out of vocabulary"
+    },
+    {
+      "field_id": "ocupacion_momento_exposicion",
+      "label": "Ocupación durante exposición",
+      "section": "exposicion",
+      "source": "official_mapping_pending",
+      "capture_type": "category",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "choices_source": "artifacts.transformers.m1 vocabulary; preserve original if out of vocabulary"
+    },
+    {
+      "field_id": "tiempo_exposicion_horas_equiv",
+      "label": "Tiempo equivalente de exposición (horas)",
+      "section": "exposicion",
+      "source": "official_mapping_pending",
+      "capture_type": "number",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "semantic_note": "Capture original duration and unit separately; no silent month/year conversion."
+    },
+    {
+      "field_id": "EXT_27b_quema_amalgama_frecuencia",
+      "label": "Frecuencia de quema de amalgama",
+      "section": "exposicion",
+      "source": "extension_scientific",
+      "capture_type": "number",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "extension_not_official",
+      "unit_status": "pending simulator semantics verification; no automatic NLP quantity conversion"
+    },
+    {
+      "field_id": "EXT_27c_quema_espacio_cerrado_o_vivienda",
+      "label": "Quema en recinto cerrado o vivienda",
+      "section": "exposicion",
+      "source": "extension_scientific",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "extension_not_official",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "EXT_27d_uso_retorta",
+      "label": "Uso de retorta",
+      "section": "exposicion",
+      "source": "extension_scientific",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "extension_not_official",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "presencia_empresas_mineras",
+      "label": "Presencia de empresas mineras",
+      "section": "exposicion",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "consumo_pescado_rio",
+      "label": "Consumo de pescado de río",
+      "section": "exposicion",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ],
+      "nlp_aliases": [
+        "pescado de río"
+      ]
+    },
+    {
+      "field_id": "frecuencia_consumo_pescado_dias",
+      "label": "Consumo de pescado (días en últimos 30)",
+      "section": "exposicion",
+      "source": "official_mapping_pending",
+      "capture_type": "integer",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "backend_range": [
+        0,
+        30
+      ]
+    },
+    {
+      "field_id": "EXT_32b_especies_piscivoras_alto_hg",
+      "label": "Consumo de especies piscívoras de alto Hg",
+      "section": "exposicion",
+      "source": "extension_scientific",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "extension_not_official",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "EXT_32c_frecuencia_piscivoros_30d",
+      "label": "Consumo de piscívoros (días en últimos 30)",
+      "section": "exposicion",
+      "source": "extension_scientific",
+      "capture_type": "integer",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "extension_not_official",
+      "backend_range": [
+        0,
+        30
+      ]
+    },
+    {
+      "field_id": "EXT_32d_tamano_porcion_gramos",
+      "label": "Tamaño de porción (g)",
+      "section": "exposicion",
+      "source": "extension_scientific",
+      "capture_type": "number",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "extension_not_official",
+      "backend_range": [
+        0,
+        3000
+      ]
+    },
+    {
+      "field_id": "antecedente_familiar_mineria",
+      "label": "Antecedente familiar de minería",
+      "section": "exposicion",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "tipo_parentesco",
+      "label": "Tipo de parentesco",
+      "section": "exposicion",
+      "source": "official_mapping_pending",
+      "capture_type": "category",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "choices_source": "artifacts.transformers.m1 vocabulary; preserve original if out of vocabulary"
+    },
+    {
+      "field_id": "clin_35_nauseas",
+      "label": "Náuseas",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "náuseas"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_36_vomito",
+      "label": "Vómito",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "vómito"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_37_disfagia",
+      "label": "Disfagia",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "disfagia"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_38_gingivitis",
+      "label": "Gingivitis",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "gingivitis"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_39_salivacion_excesiva",
+      "label": "Salivación excesiva",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "salivación excesiva"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_40_estomatitis_mercurial",
+      "label": "Estomatitis mercurial",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "estomatitis mercurial"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_41_sabor_metalico",
+      "label": "Sabor metálico",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "sabor metálico"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_42_ribete_gilbert",
+      "label": "Ribete de Gilbert",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "ribete de gilbert"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_43_diente_letulle",
+      "label": "Diente de Letulle",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "diente de letulle"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_44_hepatomegalia",
+      "label": "Hepatomegalia",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "hepatomegalia"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_45_hematuria",
+      "label": "Hematuria",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "hematuria"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_46_prurito",
+      "label": "Prurito",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "prurito"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_47_descamacion_piel",
+      "label": "Descamación de piel",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "descamación de piel"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_48_erupcion_cutanea",
+      "label": "Erupción cutánea",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "erupción cutánea"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_49_irritacion_ocular",
+      "label": "Irritación ocular",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "irritación ocular"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_50_conjuntivitis",
+      "label": "Conjuntivitis",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "conjuntivitis"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_51_disminucion_campo_visual",
+      "label": "Disminución del campo visual",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "disminución del campo visual"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_52_opresion_ardor_torax",
+      "label": "Opresión o ardor torácico",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "opresión o ardor torácico"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_53_convulsiones",
+      "label": "Convulsiones",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "convulsiones"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_54_disfuncion_renal",
+      "label": "Disfunción renal",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "disfunción renal"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_55_depresion",
+      "label": "Depresión",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "depresión"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_56_ansiedad",
+      "label": "Ansiedad",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "ansiedad"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_57_irritabilidad",
+      "label": "Irritabilidad",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "irritabilidad"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_58_disartria",
+      "label": "Disartria",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "disartria"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_59_ataxia",
+      "label": "Ataxia",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "ataxia"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_60_polineuropatia_periferica",
+      "label": "Polineuropatía periférica",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "polineuropatía periférica"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_61_adormecimiento",
+      "label": "Adormecimiento",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "adormecimiento"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_62_temblor_distal",
+      "label": "Temblor distal",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "temblor distal"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_63_disnea",
+      "label": "Disnea",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "disnea"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "clin_64_tos",
+      "label": "Tos",
+      "section": "clinica",
+      "source": "official_mapping_pending",
+      "capture_type": "binary",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "proposal",
+      "nlp_aliases": [
+        "tos"
+      ],
+      "normative_page": 37,
+      "allow_not_applicable": true,
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "proposal"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "values": [
+        0,
+        1,
+        null
+      ]
+    },
+    {
+      "field_id": "EXT_64b_fecha_inicio_sintomas",
+      "label": "Fecha de inicio de síntomas",
+      "section": "clinica",
+      "source": "extension_scientific",
+      "capture_type": "date",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "authorized_raw_input",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "extension_not_official"
+    },
+    {
+      "field_id": "tipo_muestra",
+      "label": "Tipo de muestra",
+      "section": "laboratorio",
+      "source": "official_mapping_pending",
+      "capture_type": "select",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "lab",
+      "model_roles": {
+        "M1": "excluded",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "choices": [
+        "Cabello",
+        "Orina",
+        "Sangre"
+      ],
+      "additional_capture_options_pending_mapping": true
+    },
+    {
+      "field_id": "fecha_toma_muestra",
+      "label": "Fecha de toma",
+      "section": "laboratorio",
+      "source": "official_mapping_pending",
+      "capture_type": "date",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "lab",
+      "model_roles": {
+        "M1": "excluded",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification"
+    },
+    {
+      "field_id": "fecha_envio_lab",
+      "label": "Fecha de envío",
+      "section": "laboratorio",
+      "source": "official_mapping_pending",
+      "capture_type": "date",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "lab",
+      "model_roles": {
+        "M1": "excluded",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification"
+    },
+    {
+      "field_id": "EXT_67b_concentracion_hg_resultado",
+      "label": "Concentración de Hg",
+      "section": "laboratorio",
+      "source": "extension_scientific",
+      "capture_type": "number",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "lab",
+      "model_roles": {
+        "M1": "excluded",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "extension_not_official"
+    },
+    {
+      "field_id": "EXT_67c_unidad_medida",
+      "label": "Unidad original",
+      "section": "laboratorio",
+      "source": "extension_scientific",
+      "capture_type": "select",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "lab",
+      "model_roles": {
+        "M1": "excluded",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "extension_not_official",
+      "choices": [
+        "ug/g",
+        "ug/g Cr",
+        "ug/L"
+      ]
+    },
+    {
+      "field_id": "EXT_67d_longitud_segmento_cabello_cm",
+      "label": "Longitud del segmento capilar (cm)",
+      "section": "laboratorio",
+      "source": "extension_scientific",
+      "capture_type": "number",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "lab",
+      "model_roles": {
+        "M1": "excluded",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "extension_not_official"
+    },
+    {
+      "field_id": "via_exposicion",
+      "label": "Vía de exposición",
+      "section": "exposicion",
+      "source": "official_mapping_pending",
+      "capture_type": "grouped",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "project_to_indicators",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "members": [
+        "via_respiratoria",
+        "via_dermica",
+        "via_oral",
+        "via_desconocida"
+      ]
+    },
+    {
+      "field_id": "tipo_exposicion",
+      "label": "Tipo de exposición",
+      "section": "exposicion",
+      "source": "official_mapping_pending",
+      "capture_type": "grouped",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "project_to_indicators",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification",
+      "members": [
+        "tipo_ocupacional",
+        "tipo_accidental",
+        "tipo_ambiental"
+      ]
+    },
+    {
+      "field_id": "nombre_apellido",
+      "label": "Nombre y apellido",
+      "section": "identificacion",
+      "source": "official_mapping_pending",
+      "capture_type": "text",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "restricted_identifier_or_free_text",
+      "nlp_mode": "disabled",
+      "storage": "private",
+      "model_roles": {
+        "M1": "excluded",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification"
+    },
+    {
+      "field_id": "ci",
+      "label": "Cédula de identidad",
+      "section": "identificacion",
+      "source": "official_mapping_pending",
+      "capture_type": "text",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "restricted_identifier_or_free_text",
+      "nlp_mode": "disabled",
+      "storage": "private",
+      "model_roles": {
+        "M1": "excluded",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification"
+    },
+    {
+      "field_id": "telefono",
+      "label": "Teléfono",
+      "section": "identificacion",
+      "source": "official_mapping_pending",
+      "capture_type": "text",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "restricted_identifier_or_free_text",
+      "nlp_mode": "disabled",
+      "storage": "private",
+      "model_roles": {
+        "M1": "excluded",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification"
+    },
+    {
+      "field_id": "nombre_padres_apoderados",
+      "label": "Nombre de padres o apoderados",
+      "section": "identificacion",
+      "source": "official_mapping_pending",
+      "capture_type": "text",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "restricted_identifier_or_free_text",
+      "nlp_mode": "disabled",
+      "storage": "private",
+      "model_roles": {
+        "M1": "excluded",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification"
+    },
+    {
+      "field_id": "residencia_anterior",
+      "label": "Residencia anterior",
+      "section": "identificacion",
+      "source": "official_mapping_pending",
+      "capture_type": "text",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "restricted_identifier_or_free_text",
+      "nlp_mode": "disabled",
+      "storage": "private",
+      "model_roles": {
+        "M1": "excluded",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification"
+    },
+    {
+      "field_id": "nombre_apellido_notificador",
+      "label": "Nombre del notificador",
+      "section": "cierre",
+      "source": "official_mapping_pending",
+      "capture_type": "text",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "restricted_identifier_or_free_text",
+      "nlp_mode": "disabled",
+      "storage": "private",
+      "model_roles": {
+        "M1": "excluded",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification"
+    },
+    {
+      "field_id": "cargo_notificador",
+      "label": "Cargo del notificador",
+      "section": "cierre",
+      "source": "official_mapping_pending",
+      "capture_type": "text",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "health_sensitive",
+      "nlp_mode": "disabled",
+      "storage": "case",
+      "model_roles": {
+        "M1": "excluded",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification"
+    },
+    {
+      "field_id": "observaciones",
+      "label": "Observaciones",
+      "section": "cierre",
+      "source": "official_mapping_pending",
+      "capture_type": "textarea",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "restricted_identifier_or_free_text",
+      "nlp_mode": "disabled",
+      "storage": "private",
+      "model_roles": {
+        "M1": "excluded",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification"
+    },
+    {
+      "field_id": "firma",
+      "label": "Firma",
+      "section": "cierre",
+      "source": "official_mapping_pending",
+      "capture_type": "text",
+      "nullable": true,
+      "required_to_finalize": false,
+      "privacy": "restricted_identifier_or_free_text",
+      "nlp_mode": "disabled",
+      "storage": "private",
+      "model_roles": {
+        "M1": "excluded",
+        "M2": "excluded",
+        "M3_NLP": "disabled"
+      },
+      "normative_mapping_status": "pending_item_level_verification"
+    }
+  ],
+  "existing_operational_fields": [
+    {
+      "field_id": "procedencia_zona_riesgo_hg",
+      "capture_type": "binary",
+      "values": [
+        0,
+        1,
+        null
+      ],
+      "source": "existing_operational",
+      "nlp_mode": "disabled",
+      "professional_confirmation": true,
+      "storage": "case"
+    },
+    {
+      "field_id": "manifestacion_clinica_compatible",
+      "capture_type": "binary",
+      "values": [
+        0,
+        1,
+        null
+      ],
+      "source": "existing_operational",
+      "nlp_mode": "disabled",
+      "professional_confirmation": true,
+      "storage": "case"
+    },
+    {
+      "field_id": "clin_eretismo",
+      "capture_type": "binary",
+      "values": [
+        0,
+        1,
+        null
+      ],
+      "source": "existing_operational",
+      "nlp_mode": "disabled",
+      "professional_confirmation": true,
+      "storage": "case"
+    },
+    {
+      "field_id": "clin_memoria",
+      "capture_type": "binary",
+      "values": [
+        0,
+        1,
+        null
+      ],
+      "source": "existing_operational",
+      "nlp_mode": "disabled",
+      "professional_confirmation": true,
+      "storage": "case"
+    },
+    {
+      "field_id": "clin_concentracion",
+      "capture_type": "binary",
+      "values": [
+        0,
+        1,
+        null
+      ],
+      "source": "existing_operational",
+      "nlp_mode": "disabled",
+      "professional_confirmation": true,
+      "storage": "case"
+    },
+    {
+      "field_id": "exposicion_activa",
+      "capture_type": "binary",
+      "values": [
+        0,
+        1,
+        null
+      ],
+      "source": "existing_operational",
+      "nlp_mode": "disabled",
+      "professional_confirmation": true,
+      "storage": "case"
+    },
+    {
+      "field_id": "exposicion_cronica_sistematica",
+      "capture_type": "binary",
+      "values": [
+        0,
+        1,
+        null
+      ],
+      "source": "existing_operational",
+      "nlp_mode": "disabled",
+      "professional_confirmation": true,
+      "storage": "case"
+    },
+    {
+      "field_id": "exposicion_dietetica_cronica",
+      "capture_type": "binary",
+      "values": [
+        0,
+        1,
+        null
+      ],
+      "source": "existing_operational",
+      "nlp_mode": "disabled",
+      "professional_confirmation": true,
+      "storage": "case"
+    },
+    {
+      "field_id": "laboratorio_sangre_validado",
+      "capture_type": "binary",
+      "values": [
+        0,
+        1,
+        null
+      ],
+      "source": "existing_operational",
+      "nlp_mode": "disabled",
+      "professional_confirmation": true,
+      "storage": "lab"
+    },
+    {
+      "field_id": "laboratorio_orina_validado",
+      "capture_type": "binary",
+      "values": [
+        0,
+        1,
+        null
+      ],
+      "source": "existing_operational",
+      "nlp_mode": "disabled",
+      "professional_confirmation": true,
+      "storage": "lab"
+    },
+    {
+      "field_id": "fecha_inicio_exposicion",
+      "capture_type": "date",
+      "source": "existing_operational",
+      "storage": "case",
+      "nlp_mode": "disabled"
+    },
+    {
+      "field_id": "fecha_cese_exposicion",
+      "capture_type": "partial_date",
+      "source": "existing_operational",
+      "storage": "case",
+      "nlp_mode": "disabled"
+    },
+    {
+      "field_id": "horas_quema_amalgama",
+      "capture_type": "number",
+      "source": "existing_operational",
+      "storage": "case",
+      "nlp_mode": "disabled"
+    },
+    {
+      "field_id": "ingesta_pescado_g_dia",
+      "capture_type": "number",
+      "source": "existing_operational",
+      "storage": "case",
+      "nlp_mode": "disabled"
+    },
+    {
+      "field_id": "concentracion_mehg_pescado_ug_g",
+      "capture_type": "number",
+      "source": "existing_operational",
+      "storage": "case",
+      "nlp_mode": "disabled"
+    },
+    {
+      "field_id": "lab_hg_cabello_ug_g",
+      "capture_type": "number",
+      "unit": "ug/g",
+      "source": "existing_lab",
+      "storage": "lab",
+      "nlp_mode": "disabled",
+      "min": 0,
+      "unit_field": "lab_hg_cabello_ug_g_unidad"
+    },
+    {
+      "field_id": "lab_hg_orina_ug_g_cr",
+      "capture_type": "number",
+      "unit": "ug/g Cr",
+      "source": "existing_lab",
+      "storage": "lab",
+      "nlp_mode": "disabled",
+      "min": 0,
+      "unit_field": "lab_hg_orina_ug_g_cr_unidad"
+    },
+    {
+      "field_id": "lab_hg_sangre_ug_l",
+      "capture_type": "number",
+      "unit": "ug/L",
+      "source": "existing_lab",
+      "storage": "lab",
+      "nlp_mode": "disabled",
+      "min": 0,
+      "unit_field": "lab_hg_sangre_ug_l_unidad"
+    },
+    {
+      "field_id": "lab_hg_orina_ug_g",
+      "capture_type": "number",
+      "unit": "ug/g",
+      "source": "existing_lab",
+      "storage": "lab",
+      "nlp_mode": "disabled",
+      "min": 0,
+      "unit_field": "lab_hg_orina_ug_g_unidad"
+    },
+    {
+      "field_id": "lab_hg_cordon_ug_l",
+      "capture_type": "number",
+      "unit": "ug/L",
+      "source": "existing_lab",
+      "storage": "lab",
+      "nlp_mode": "disabled",
+      "min": 0,
+      "unit_field": "lab_hg_cordon_ug_l_unidad"
+    }
+  ],
+  "new_capture_metadata": [
+    "patient_id",
+    "case_id",
+    "record_version",
+    "created_at",
+    "updated_at",
+    "field_status",
+    "field_provenance",
+    "duration_original_value",
+    "duration_original_unit",
+    "age_original_value",
+    "age_original_unit",
+    "other_exposure_text"
+  ],
+  "new_territory_fields": [
+    "geo_latitude",
+    "geo_longitude",
+    "geo_source",
+    "geo_accuracy_m",
+    "geo_scope"
+  ],
+  "forbidden_m1": [
+    "row_id",
+    "clasificacion_guia537",
+    "flag_anomalia_real",
+    "indicador_laboratorio_pendiente",
+    "y_*",
+    "lab_*",
+    "EXT_67*",
+    "PII",
+    "latent data"
+  ],
+  "notes": [
+    "All fields nullable during draft. Finalization requirement for notification date is a proposed engineering rule, not a normative mandate.",
+    "Normative mapping item by item remains pending; do not claim 71 official items independently certified.",
+    "M2 and M3_NLP roles are proposed; existing M3A/M3B remain unchanged.",
+    "NLP aliases are seed proposals, not validated clinical lexicon.",
+    "Use exact no aplica token for clinical exclusions when applicable."
+  ]
+}
